@@ -4,19 +4,7 @@
 
 // Declarar Variables
 
-$color_1: #fffdfc;
-$color_2: #b97114;
-$color_3: #f9f9fc;
-$color_4: #c5c5c5;
-$color_5: #242323;
-$color_6: #363434;
-$font-family_1: 'Poppins', sans-serif;
-$background-color_1: #c7bc99;
-$background-color_2: #b97114;
-$background-color_3: #8e570f;
-$background-color_4: #c7bc9970;
-$background-color_5: #000;
-$background-color_6: #242323;
+@import 'variables';
 
 
 * {
@@ -32,88 +20,10 @@ $background-color_6: #242323;
 	margin: 0 auto;
 }
 
-// HEADER
+// HEADER MENU
 
-.header {
-	background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/imgs/fondo.webp);
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	background-size: cover;
-	min-height: 90vh;
-	display: flex;
-	align-items: center;
-}
+@import 'header';
 
-// MENU
-.menu {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	.navbar {
-		ul {
-			li {
-				position: relative;
-				float: left;
-				a {
-					text-decoration: none;
-					font-size: 18px;
-					padding: 20px;
-					color: $color_1;
-					display: block;
-					font-weight: 600;
-					&:hover {
-						color: $color_2;
-					}
-				}
-			}
-		}
-	}
-	label {
-		cursor: pointer;
-		display: none;
-	}
-}
-.logo {
-	img {
-		width: 5em;
-		margin: 20px;
-		filter: invert(89%) sepia(1%) saturate(1233%) hue-rotate(315deg) brightness(105%) contrast(116%);
-		&:hover {
-			filter: invert(39%) sepia(98%) saturate(448%) hue-rotate(354deg) brightness(99%) contrast(88%);
-		}
-	}
-}
-#menu {
-	display: none;
-}
-.menu-icono {
-	width: 35px;
-	filter: invert(89%) sepia(1%) saturate(1233%) hue-rotate(315deg) brightness(105%) contrast(116%);
-}
-
-// HEADER CONTENIDO
-.header-content {
-	text-align: center;
-	h1 {
-		font-family: $font-family_1;
-		font-size: 65px;
-		font-weight: 800;
-		line-height: 90px;
-		color: $color_3;
-		margin-bottom: 25px;
-	}
-	p {
-		color: $color_4;
-		font-size: 20px;
-		line-height: 75px;
-		padding: 0 250px;
-		margin-bottom: 25px;
-	}
-}
 
 // INICIO
 
@@ -148,9 +58,9 @@ $background-color_6: #242323;
 .btn-primary {
 	padding: 10px 40px;
 	border: 1px solid #363434;
-	background-color: $background-color_2;
+	background-color: $background-color_3;
 	&:hover {
-		background-color: $background-color_3;
+		background-color: $background-color_2;
 	}
 	a {
 		color: $color_3;
@@ -169,13 +79,13 @@ $background-color_6: #242323;
 	padding: 100px 250px 100px 100px;
 	background-color: $background-color_1;
 	text-align: left;
-	font-size: 25px;
-	font-weight: 500;
+	font-size: 30px;
+	font-weight: 600;
 	color: $color_6;
 	width: 60%;
 	margin: auto;
 	h2 {
-		font-weight: 700;
+		font-weight: 800;
 		font-size: 40px;
 		line-height: 100px;
 		color: $color_5;
@@ -198,7 +108,7 @@ $background-color_6: #242323;
 .separador {
 	width: 100%;
 	height: 100vh;
-	background-image: linear-gradient( rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/imgs/separadpr.jpeg);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/imgs/separadpr.jpeg);
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -207,58 +117,46 @@ $background-color_6: #242323;
 
 // PRODUCTOS
 
-.beer-grupo-cont {
-	padding: 100px 0;
+
+.birras {
 	background-color: $background-color_1;
-}
-.beer-grupo {
-	max-width: 1200px;
 	display: flex;
-	justify-content: space-between;
-	margin-bottom: 50px;
-	margin-top: 30px;
+	justify-content: center;
+	justify-content: space-evenly;
+	padding: 20px;
 }
 .estilos-birras {
-	margin: 0 25px;
-	img {
-		width: 350px;
-	}
+	background-color: $background-color_1;
+	padding: 20px;
+	text-align: center;
+	border-radius: 20px;
 	h3 {
-		text-align: left;
+		text-align: center;
 		font-size: 35px;
 		margin-bottom: 10px;
 		font-weight: 700;
 		color: $color_5;
 	}
 	p {
-		text-align: left;
+		text-align: center;
 		font-size: 15px;
 		font-weight: 600;
 		color: $color_6;
+		margin-bottom: 40px;
 	}
-}
-.btn-prod {
-	display: flex;
-	margin: 15px 0 25px 110px;
-	padding: 10px;
-	border-radius: 10px;
-	border: 1px solid #363434;
-	background-color: $background-color_2;
 	&:hover {
-		background-color: $background-color_3;
-	}
-	a {
-		color: $color_3;
-		font-size: 15px;
-		text-decoration: none;
+		transform: scale(1.05);
+		transition: 1.1s;
 	}
 }
+
 
 // LOCAL
 
 .local-txt {
-	padding: 80px 0; 
+	padding: 80px 0;
 	background-color: $background-color_1;
+	padding: 55px;
 	h2 {
 		text-align: center;
 		margin-bottom: 60px;
@@ -280,6 +178,7 @@ ul {
 		margin: 10px;
 	}
 }
+
 .galeria-grid {
 	background-color: $background-color_4;
 	position: relative;
@@ -287,7 +186,7 @@ ul {
 	padding: 10px;
 	ul {
 		display: grid;
-		grid-template-columns: repeat(auto-fit,minmax(100px,auto));
+		grid-template-columns: repeat(auto-fit, minmax(100px, auto));
 		grid-auto-flow: dense;
 		grid-gap: 2px;
 		justify-content: center;
@@ -386,103 +285,54 @@ ul {
 .mapa {
 	iframe {
 		width: 100%;
-		height: 60vh;
+		height: 80vh;
 	}
 }
-.footer {
-	background-color: $background-color_5;
-	height: 10vh;
+
+.formulario {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	background-color: $background-color_1;
 }
-.footer-txt {
-	color: $color_1;
-	padding: 15px;
+
+.formulario-contenido {
+	width: 25%;
+	background-color: $background-color_6;
 	text-align: center;
+	margin: 20px;
+	padding: 30px;
+	border: 2px solid #242323;
+	border-radius: 12px;
+	img{
+		position: relative;
+		width: 6em;
+		margin: 30px;
+		filter: invert(39%) sepia(98%) saturate(448%) hue-rotate(354deg) brightness(99%) contrast(88%);
+	}
+	h2 {
+		font-size: 800;
+		color: #b97114;
+		margin-bottom: 20px;
+	}
+	.form-label{
+		color: #b97114;
+	}
+	&:hover {
+		transform: scale(1.1);
+		transition: 1.2s;
+	}
+
 }
+
+// FOOTER
+
+@import 'footer';
+
+
 
 // MEDIA QUERY
 
-@media (max-width: 576px) {
-	.menu {
-		padding: 10px;
-		padding-right: 20px;
-		z-index: 10;
-		label {
-			display: initial;
-		}
-		.navbar {
-			position: absolute;
-			top: 100%;
-			left: 0;
-			right: 0;
-			height: 100vh;
-			background-color: $background-color_6;
-			display: none;
-			ul {
-				li {
-					width: 100%;
-				}
-			}
-		}
-	}
-	#menu {
-		&:checked {
-			~ {
-				.navbar {
-					display: initial;
-				}
-			}
-		}
-	}
-	.header {
-		min-height: 0vh;
-	}
-	.header-content {
-		padding: 100px 30px;
-		p {
-			padding: 0;
-		}
-	}
-	.beer {
-		display: flex;
-		padding: 30px;
-		max-width: 576px;
-	}
-	.beer-content {
-		h2 {
-			font-size: 40px;
-			padding: 0;
-		}
-		p {
-			font-size: 16px;
-			padding: 0;
-		}
-	}
-	.beer-img {
-		display: none;
-	}
-	.beer-grupo {
-		margin-top: -80px;
-		flex-direction: column;
-		margin-bottom: 0;
-	}
-	.nosotros {
-		flex-direction: column;
-	}
-	.nosotros-1 {
-		width: 100%;
-		padding: 30px;
-		text-align: center;
-	}
-	.nosotros-img {
-		display: none;
-	}
-	.nosotros-2-img {
-		display: none;
-	}
-	.galeria-grid {
-		display: none;
-	}
-}
-.local-txt {
-	padding: 15px;
-}
+@import 'media-query';
+
+

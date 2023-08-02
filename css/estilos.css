@@ -77,14 +77,15 @@
   font-family: "Poppins", sans-serif;
   font-size: 65px;
   font-weight: 800;
-  line-height: 90px;
+  line-height: 70px;
   color: #f9f9fc;
+  margin-top: 60px;
   margin-bottom: 25px;
 }
 .header-content p {
   color: #c5c5c5;
   font-size: 20px;
-  line-height: 75px;
+  line-height: 40px;
   padding: 0 250px;
   margin-bottom: 25px;
 }
@@ -123,10 +124,10 @@
 .btn-primary {
   padding: 10px 40px;
   border: 1px solid #363434;
-  background-color: #b97114;
+  background-color: #8e570f;
 }
 .btn-primary:hover {
-  background-color: #8e570f;
+  background-color: #b97114;
 }
 .btn-primary a {
   color: #f9f9fc;
@@ -143,14 +144,14 @@
   padding: 100px 250px 100px 100px;
   background-color: #c7bc99;
   text-align: left;
-  font-size: 25px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 600;
   color: #363434;
   width: 60%;
   margin: auto;
 }
 .nosotros-1 h2 {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 40px;
   line-height: 100px;
   color: #242323;
@@ -182,59 +183,43 @@
   background-attachment: fixed;
 }
 
-.beer-grupo-cont {
-  padding: 100px 0;
+.birras {
   background-color: #c7bc99;
-}
-
-.beer-grupo {
-  max-width: 1200px;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 50px;
-  margin-top: 30px;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 20px;
 }
 
 .estilos-birras {
-  margin: 0 25px;
-}
-.estilos-birras img {
-  width: 350px;
+  background-color: #c7bc99;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
 }
 .estilos-birras h3 {
-  text-align: left;
+  text-align: center;
   font-size: 35px;
   margin-bottom: 10px;
   font-weight: 700;
   color: #242323;
 }
 .estilos-birras p {
-  text-align: left;
+  text-align: center;
   font-size: 15px;
   font-weight: 600;
   color: #363434;
+  margin-bottom: 40px;
 }
-
-.btn-prod {
-  display: flex;
-  margin: 15px 0 25px 110px;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #363434;
-  background-color: #b97114;
-}
-.btn-prod:hover {
-  background-color: #8e570f;
-}
-.btn-prod a {
-  color: #f9f9fc;
-  font-size: 15px;
-  text-decoration: none;
+.estilos-birras:hover {
+  transform: scale(1.05);
+  transition: 1.1s;
 }
 
 .local-txt {
   padding: 80px 0;
   background-color: #c7bc99;
+  padding: 55px;
 }
 .local-txt h2 {
   text-align: center;
@@ -361,7 +346,42 @@ ul li {
 
 .mapa iframe {
   width: 100%;
-  height: 60vh;
+  height: 80vh;
+}
+
+.formulario {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #c7bc99;
+}
+
+.formulario-contenido {
+  width: 25%;
+  background-color: #242323;
+  text-align: center;
+  margin: 20px;
+  padding: 30px;
+  border: 2px solid #242323;
+  border-radius: 12px;
+}
+.formulario-contenido img {
+  position: relative;
+  width: 6em;
+  margin: 30px;
+  filter: invert(39%) sepia(98%) saturate(448%) hue-rotate(354deg) brightness(99%) contrast(88%);
+}
+.formulario-contenido h2 {
+  font-size: 800;
+  color: #b97114;
+  margin-bottom: 20px;
+}
+.formulario-contenido .form-label {
+  color: #b97114;
+}
+.formulario-contenido:hover {
+  transform: scale(1.1);
+  transition: 1.2s;
 }
 
 .footer {
@@ -375,7 +395,7 @@ ul li {
   text-align: center;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 480px) {
   .menu {
     padding: 10px;
     padding-right: 20px;
@@ -383,21 +403,31 @@ ul li {
   }
   .menu label {
     display: initial;
+    z-index: 100;
   }
   .menu .navbar {
     position: absolute;
+    margin: -110px 0 0 0;
     top: 100%;
-    left: 0;
+    left: 0%;
     right: 0;
-    height: 100vh;
+    height: 150vh;
     background-color: #242323;
     display: none;
   }
   .menu .navbar ul li {
+    margin: auto;
+    width: 100%;
+  }
+  .menu .navbar ul li:first-child {
+    margin-top: 120px;
     width: 100%;
   }
   #menu:checked ~ .navbar {
     display: initial;
+  }
+  .logo {
+    z-index: 100;
   }
   .header {
     min-height: 0vh;
@@ -418,8 +448,9 @@ ul li {
     padding: 0;
   }
   .beer-content p {
-    font-size: 16px;
+    font-size: 18px;
     padding: 0;
+    text-align: center;
   }
   .beer-img {
     display: none;
@@ -437,18 +468,51 @@ ul li {
     padding: 30px;
     text-align: center;
   }
+  .nosotros-1 h2 {
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+  .nosotros-1 p {
+    font-size: 18px;
+  }
   .nosotros-img {
     display: none;
   }
   .nosotros-2-img {
     display: none;
   }
+  .local-txt {
+    padding: 15px;
+  }
+  .local-txt h2 {
+    font-size: 45px;
+  }
+  .local-txt p {
+    font-size: 18px;
+    text-align: left;
+  }
   .galeria-grid {
     display: none;
   }
-}
-.local-txt {
-  padding: 15px;
+  .birras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+  }
+  .estilos-birras {
+    margin: 20px;
+  }
+  .card-body h3 {
+    font-size: 40px;
+  }
+  .card-body p {
+    font-size: 18px;
+    text-align: center;
+  }
+  .formulario-contenido {
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
