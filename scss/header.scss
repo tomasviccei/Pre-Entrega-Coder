@@ -1,0 +1,80 @@
+// HEADER Y MENU
+
+.header {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/imgs/fondo.webp);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 90vh;
+	display: flex;
+	align-items: center;
+}
+
+.menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.navbar {
+		ul {
+			li {
+				position: relative;
+				float: left;
+				a {
+					text-decoration: none;
+					font-size: 18px;
+					padding: 20px;
+					color: $color_1;
+					display: block;
+					font-weight: 600;
+					&:hover {
+						color: $color_2;
+					}
+				}
+			}
+		}
+	}
+	label {
+		cursor: pointer;
+		display: none;
+	}
+}
+.logo {
+	img {
+		width: 5em;
+		margin: 20px;
+		filter: invert(89%) sepia(1%) saturate(1233%) hue-rotate(315deg) brightness(105%) contrast(116%);
+		&:hover {
+			filter: invert(39%) sepia(98%) saturate(448%) hue-rotate(354deg) brightness(99%) contrast(88%);
+		}
+	}
+}
+#menu {
+	display: none;
+}
+.menu-icono {
+	width: 35px;
+	filter: invert(89%) sepia(1%) saturate(1233%) hue-rotate(315deg) brightness(105%) contrast(116%);
+}
+.header-content {
+	text-align: center;
+	h1 {
+		font-family: $font-family_1;
+		font-size: 65px;
+		font-weight: 800;
+		line-height: 70px;
+		color: $color_3;
+		margin-top: 60px;
+		margin-bottom: 25px;
+	}
+	p {
+		color: $color_4;
+		font-size: 20px;
+		line-height: 40px;
+		padding: 0 250px;
+		margin-bottom: 25px;
+	}
+}
