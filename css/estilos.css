@@ -395,6 +395,126 @@ ul li {
   text-align: center;
 }
 
+@media (max-width: 1000px) {
+  .menu {
+    padding: 10px;
+    padding-right: 20px;
+    z-index: 10;
+  }
+  .menu label {
+    display: initial;
+    z-index: 100;
+  }
+  .menu .navbar {
+    position: absolute;
+    margin: -110px 0 0 0;
+    top: 100%;
+    left: 0%;
+    right: 0;
+    width: 100%;
+    height: 150vh;
+    background-color: #242323;
+    display: none;
+  }
+  .menu .navbar ul li {
+    margin: auto;
+    width: 100%;
+  }
+  .menu .navbar ul li:first-child {
+    margin-top: 120px;
+    width: 100%;
+  }
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+  .logo {
+    z-index: 100;
+  }
+  .header {
+    min-height: 0vh;
+  }
+  .header-content {
+    padding: 100px 30px;
+  }
+  .header-content p {
+    padding: 0;
+  }
+  .beer {
+    display: flex;
+    padding: 30px;
+    max-width: 100vw;
+  }
+  .beer-content h2 {
+    font-size: 40px;
+    padding: 0;
+  }
+  .beer-content p {
+    font-size: 18px;
+    padding: 0;
+    text-align: center;
+  }
+  .beer-img {
+    display: none;
+  }
+  .beer-grupo {
+    margin-top: -80px;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .nosotros {
+    flex-direction: column;
+  }
+  .nosotros-1 {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+  }
+  .nosotros-1 h2 {
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+  .nosotros-1 p {
+    font-size: 18px;
+  }
+  .nosotros-img {
+    display: none;
+  }
+  .nosotros-2-img {
+    display: none;
+  }
+  .local-txt {
+    padding: 15px;
+  }
+  .local-txt h2 {
+    font-size: 45px;
+  }
+  .local-txt p {
+    font-size: 18px;
+    text-align: left;
+  }
+  .galeria-grid {
+    display: none;
+  }
+  .birras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+  }
+  .estilos-birras {
+    margin: 20px;
+  }
+  .card-body h3 {
+    font-size: 40px;
+  }
+  .card-body p {
+    font-size: 18px;
+    text-align: center;
+  }
+  .formulario-contenido {
+    width: auto;
+  }
+}
 @media (max-width: 480px) {
   .menu {
     padding: 10px;
