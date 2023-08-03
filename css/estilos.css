@@ -158,19 +158,19 @@
 }
 
 .nosotros-2 {
-  background-image: url(/imgs/birra.webp);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   width: 70%;
+  background-image: url(/imgs/birra.webp);
 }
 
 .nosotros-3 {
-  background-image: url(/imgs/contacto.webp);
-  background-position: bottom;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   width: 70%;
+  background-image: url(/imgs/contacto.webp);
 }
 
 .separador {

@@ -1,0 +1,44 @@
+
+// MIXINS NOSOTROS
+
+@mixin flex-container {
+    display: flex;
+  }
+  
+
+  @mixin nosotros-1-styles {
+    width: 30%;
+    padding: 100px 250px 100px 100px;
+    background-color: $background-color_1;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 600;
+    color: $color_6;
+    width: 60%;
+    margin: auto;
+  
+    h2 {
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 100px;
+      color: $color_5;
+    }
+  }
+
+  @mixin nosotros-2-3-styles {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70%;
+  }
+
+  @mixin separador-styles {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/imgs/separadpr.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
